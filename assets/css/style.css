@@ -1,0 +1,262 @@
+/**
+ * @package  UpcomingSubscriptionReport
+ */
+
+/*custom styles starts here*/
+
+ [data-tooltip]:before {
+   
+    content: attr(data-tooltip);
+    position: absolute;
+    opacity: 0;
+       
+    transition: all 0.25s ease;
+    padding: 10px;
+    color:white;
+    border-radius: 3px;
+    box-shadow: 1px 1px .5px silver;    
+}
+[data-tooltip]:hover:before {
+
+    opacity: 1;
+    
+    background: #383838;
+    margin-top: 21px;
+	margin-left: -98px; 
+	font-size: 11px   
+}
+[data-tooltip]:not([data-tooltip-persistent]):before {
+    pointer-events: none;
+}
+
+
+
+span.upsr_logo_text {
+    float: right;
+    margin-top: 0;
+    margin-right: 10px
+}
+
+p.rr-content-text {
+    white-space: pre-line !important;
+}
+hr.rr-footer-rule {
+    border-top: 2px solid #96588a;
+	margin: 8px 58px 8px 58px;
+}
+h3.rr-notification-title {
+    color: #FFFFFF;
+}
+p.rr-content-text {
+    margin: 25px 30px 27px 25px;
+}
+p.rr-brand-text {
+    text-align: center;
+	color: #8A8A8A;
+    text-shadow: 2px 2px white;
+	font-size: 10px;
+}
+
+a.rr-brand-link {
+    text-decoration: none;
+	font-size: 13px;
+	color: #8A8A8A !important;
+	
+}
+
+/*upsr */
+
+
+#upsr_sbr_search {
+    float: left;
+    margin: 0 4px 0 0;
+    -webkit-appearance: textfield;
+    padding: 0 8px;
+    line-height: 2;
+    min-height: 30px;
+    box-shadow: 0 0 0 transparent;
+    border-radius: 4px;
+    border: 1px solid #8c8f94;
+    background-color: #fff;
+    color: #2c3338;
+}
+
+#upsr_search_submit , #upsr_datePicker_submit , .uspr_filter_apply ,span.uspr_nav_page_btn ,.uspr_date_picker_filter ,.upsr_button_clear {
+    color: #2271b1;
+    border-color: #2271b1;
+    background: #f6f7f7;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 2.15384615;
+    min-height: 30px;
+    margin: 0;
+    padding: 0 10px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+#upsr_search_submit:hover , #upsr_datePicker_submit:hover , .uspr_filter_apply:hover , span.uspr_nav_page_btn:hover  ,.uspr_date_picker_filter:hover  {
+    background: #f0f0f1;
+    border-color: #0a4b78;
+    color: #0a4b78;
+}
+.upsr_button_clear:hover {
+     background: #f0f0f1;
+    border-color: #0a4b78;
+    color: #0a4b78;
+}
+
+/*layout od listing box css */
+
+.uspr_table_bg th[scope=row] {
+   display: none;
+}
+
+tr.uspr_list_tb_body:nth-child(odd) {
+
+    background-color: #f6f7f7;
+}
+
+
+/*filter css */
+
+.uspr_filter_box {
+ float: left;
+}
+
+.uspr_inbox_label {
+    border: 0;
+    clip: rect(1px,1px,1px,1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal!important;
+}
+
+tr.uspr_table_bg.uspr_inline_tab {
+    display: inline-table;
+    width: 100%;
+   
+}
+tr.uspr_fr {
+    float: right;
+}
+
+tr.uspr_fl {
+    float: left;
+}
+
+/* pagination css */
+
+
+
+
+
+
+span.uspr_page_text {
+    padding-left: 13px;
+}
+span.uspr_d-num {
+    padding-right: 13px;
+}
+
+/* switch toggle css */
+
+
+
+
+form.uspr_subcription_filter_form-search {
+    display: inline-flex;
+    justify-content: normal;
+    float: right;
+    padding-bottom: 12px;
+}
+
+
+
+tbody.uspr_tbody > tr:nth-child(even) {
+    background: #f6f7f7;
+}
+
+#upsr_filter_clear {
+    margin-left: 10px;
+}
+
+
+.uspr_page_main {
+    float: right;
+}
+
+
+/* additional css for jquery table */
+
+tr.upsr-select > td {
+    padding: 0;
+}
+select[name="uspr-thead-table_length"] {
+    width: 49px;
+}
+input[aria-controls="uspr-thead-table"] {
+
+    float: left;
+    margin: 0 4px 0 0;
+    -webkit-appearance: textfield;
+    padding: 0 8px;
+    line-height: 2;
+    min-height: 30px;
+    box-shadow: 0 0 0 transparent;
+    border-radius: 4px;
+    border: 1px solid #8c8f94;
+    background-color: #fff;
+    color: #2c3338;
+    height: 12px !important;  
+}
+button#uspr_btn_refersh_data {
+    margin-left: 48px;
+    color: #0b300b;
+    border-color: #326c19;
+    background: #f6f7f7;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 2.15384615;
+    min-height: 30px;
+    
+    padding: 0 10px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+div#uspr-thead-table_wrapper {
+    padding-top: 16px;
+}
+
+h1.upsr_main_title {
+    padding-top: 10px;
+    padding-bottom: 26px;
+}
+
+table.ui-datepicker-calendar{
+    background: white;
+    border: 1px solid black;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*end*/
